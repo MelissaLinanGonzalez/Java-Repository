@@ -1,0 +1,21 @@
+@startuml
+abstract class Estudiantes {
+    - int edad
+    - String nombre
+    - int matricula
+
+    + Alumno(int edad, String nombre, int matricula)
+    + int getEdad()
+    + void setEdad(int edad)
+    + String getNombre()
+    + void setNombre(String nombre)
+    + int getMatricula()
+    + void setMatricula(int matricula)
+}
+
+
+@enduml
+
+Diseña un diagrama UML para un sistema que gestione estudianes, incluyendo atributos como nombre, edad y matrícula, y métodos para registrar y mostrar información.
+
+Crea un diagrama UML para un sistema de biblioteca que gestione libros y usuarios. Define relaciones entre ellos y métodos para prestar libros.
