@@ -64,30 +64,17 @@ public class Producto {
         System.out.println("Cantidad disponible en stock: " + getCantidadStock());
     }
 
-    public int reducirStock(int cantidad){
+    public boolean reducirStock(int cantidad){
         if (cantidad <= cantidadStock){
             cantidadStock -= cantidad;
         } else {
             System.out.println("La cantidad introducida es superior al stock disponible");
         }
-        return cantidadStock;
+        return true;
     }
 
-    public int incrementarStock(int cantidad){
+    public void incrementarStock(int cantidad){
         cantidadStock += cantidad;
-        return cantidadStock;
-    }
-
-    public static void main(String[] args) {
-        Producto p1 = new Producto(5481, "cocacola", 4.5, 20);
-
-        p1.mostrarInformacion();
-        p1.incrementarStock(5);
-        System.out.println(p1.getCantidadStock());
-        p1.reducirStock(15);
-        System.out.println(p1.getCantidadStock());
-        p1.reducirStock(15);
-        p1.mostrarInformacion();
     }
 
 }

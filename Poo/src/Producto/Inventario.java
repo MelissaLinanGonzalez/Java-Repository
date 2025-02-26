@@ -7,25 +7,20 @@ public class Inventario {
     private ArrayList<Producto> productos;
 
     public Inventario() {
-        this.productos = productos;
+        this.productos = new ArrayList<>();
     }
-
-
 
     public void agregarProducto(Producto producto){
         productos.add(producto);
-        System.out.println("Producto añadido correctamente");
     }
 
-    public void buscarProducto (int codigo){
+    public Producto buscarProducto (int codigo){
         for (Producto producto : productos) {
             if (producto.getCodigo() == codigo){
-                System.out.println("El producto con código " + codigo + " es el siguiente: ");
-                producto.mostrarInformacion();
-            } else {
-                System.out.println("Producto no encontrado");
+                return producto;
             }
         }
+        return null;
     }
 
     public void mostrarInventario (){
@@ -39,10 +34,14 @@ public class Inventario {
         }
     }
 
-    public int venderProducto (int codigo, int cantidad){
-        for (Producto producto : productos){
-            if (producto.getCodigo() == codigo){
-                producto.reducirStock(cantidad);
+    public void venderProducto(int codigo, int cantidad) {
+        Producto producto = buscarProducto(codigo);
+        if (producto == null) {
+            System.out.println("El producto con el código " + codigo + " no existe.");
+        } else {
+            boolean ventaOk = producto.reducirStock(cantidad);
+            if (ventaOk) {
+                System.out.println("Venta realizada correctamente. Stock restante: " + producto.getCantidadStock());
             }
         }
     }

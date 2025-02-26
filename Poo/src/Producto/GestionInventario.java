@@ -39,8 +39,14 @@ public class GestionInventario {
                     System.out.println("");
                     break;
                 case 3: //vender el producto
-                    System.out.println("Falta por implementar...");
-                    System.out.println("");
+                    System.out.print("Introduce el código del producto: ");
+                    int codigoVenta = entrada.nextInt();
+                    entrada.nextLine();
+                    System.out.print("Introduce la cantidad que deseas vender: ");
+                    int cantidadVenta = entrada.nextInt();
+
+                    inventario.venderProducto(codigoVenta, cantidadVenta);
+
                     break;
                 case 4: //salir del programa
                     System.out.println("Saliendo del programa...");
