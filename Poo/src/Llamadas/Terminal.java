@@ -31,7 +31,7 @@ public class Terminal {
 
     @Override
     public String toString() {
-        return "Nª " + numero + " - " + conversacion + "s de conversación";
+        return "Nª" + numero + " - " + conversacion + "s de conversación";
     }
 
 }
