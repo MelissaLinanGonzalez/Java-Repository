@@ -25,11 +25,11 @@ public class Movil extends Terminal{
         terminal.conversacion += tiempo;
 
         double tarifaPorSegundo = 0;
-        if (this.tarifa == "rata"){
+        if (this.tarifa.equals("rata") ){
             tarifaPorSegundo = 0.06 /60;
-        } else if (this.tarifa == "mono"){
+        } else if (this.tarifa.equals("mono") ){
             tarifaPorSegundo = 0.12 /60;
-        } else if (this.tarifa == "bisonte"){
+        } else if (this.tarifa.equals("bisonte")){
             tarifaPorSegundo = 0.3 /60;
         }
         this.coste += tarifaPorSegundo * tiempo;
