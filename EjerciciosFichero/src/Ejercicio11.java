@@ -14,7 +14,11 @@ public class Ejercicio11 {
 
         if (archivos != null){
             for (File archivo : archivos){
-                System.out.println(archivo.getName());
+                String tipo = "Archivo";
+                if (archivo.isDirectory()){
+                    tipo = "Directorio";
+                }
+                System.out.println(tipo + ": " + archivo.getName());
             }
         }
 
