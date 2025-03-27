@@ -1,0 +1,4 @@
+Primeras
+líneas
+del archivo
+para leer.
