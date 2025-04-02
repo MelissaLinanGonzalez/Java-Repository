@@ -1,7 +1,4 @@
 Hola, esto es un archivo nuevo en Java
-Segunda línea del archivo datos.txt
-Tercera línea del archivo datos.txt
-Esto se está poniendo interesante
-
-Nueva linea en el archivo datos.txt
 Segunda Nueva linea en el archivo datos.txt
+Segunda Nueva linea en el archivo datos.txt
+Nuevo contenido en el archivo datos.txt

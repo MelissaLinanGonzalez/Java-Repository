@@ -17,7 +17,7 @@ public class Ejercicio4 {
         try {
             agregar = archivo.exists();
             PrintWriter entrada = new PrintWriter(new FileWriter(archivo, agregar));
-            String nuevoContenido = "Segunda Nueva linea en el archivo datos.txt";
+            String nuevoContenido = "\nNuevo contenido en el archivo datos.txt";
             entrada.println(nuevoContenido); // se añade el contenido
             entrada.close();
             System.out.println("Contenido añadido correctamente");
