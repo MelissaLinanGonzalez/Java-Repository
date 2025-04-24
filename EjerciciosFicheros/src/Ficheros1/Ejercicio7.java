@@ -13,7 +13,7 @@ public class Ejercicio7 {
         int contador = 0;
         String palabraBuscada = "en";
 
-        
+
         try {
             BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
         } catch (FileNotFoundException e) {
