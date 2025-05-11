@@ -7,10 +7,9 @@ import java.io.*;
 
 public class Ej6 {
     public static void main(String[] args) {
-        File archivoOriginal = new File("Introduccion_File/src/datos.txt");
-        File archivoNuevo = new File("Introduccion_File/src/copia.txt");
+        File archivoOriginal = new File("Introduccion_File/src/informacion.txt");
+        File archivoNuevo = new File("Introduccion_File/src/copia2.txt");
         String linea;
-        String[] palabras;
 
         try {
             BufferedReader lector = new BufferedReader(new FileReader(archivoOriginal));

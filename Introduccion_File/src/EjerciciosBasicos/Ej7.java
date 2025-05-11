@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Ej7 {
     public static void main(String[] args) {
-        File archivo = new File("Introduccion_File/src/copia.txt");
+        File archivo = new File("Introduccion_File/src/datos.txt");
         String palabraBuscada = "linea";
         int contador = 0;
 
