@@ -1,0 +1,5 @@
+Holaesto es una prueba para comprobar que el scanner lee bien
+desde cualquier directorio
+Comprobamos que el ejercicio 3 funciona correctamente
+vamos a poner una palabra que se repita varias veces
+

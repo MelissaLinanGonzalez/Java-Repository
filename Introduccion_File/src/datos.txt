@@ -1,0 +1,5 @@
+Hola, esto es una prueba para crear un archivo y escribir en él
+Esta es otra linea para la prueba del ejercicio basico 3.
+Para comprobar que el lector lee bien linea por linea
+Nueva linea 1
+Nueva linea 2
