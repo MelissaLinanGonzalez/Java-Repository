@@ -1,4 +1,5 @@
-import javax.imageio.IIOException;
+package Teoria;
+
 import java.io.File;
 import java.io.IOException;
 
