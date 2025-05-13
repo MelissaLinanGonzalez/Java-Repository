@@ -4,4 +4,7 @@
 }, {
   "nombre" : "Tele",
   "precio" : 800
+}, {
+  "nombre" : "Portatil",
+  "precio" : 500
 } ]
