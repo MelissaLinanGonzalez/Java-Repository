@@ -1,10 +1,9 @@
 package EjerciciosBoletin3;
 
 /*Maximo y minimo
-* IMplementa un programa que muestre por pantalla los valores máximos y mínimos del archivo.txt*/
+* Implementa un programa que muestre por pantalla los valores máximos y mínimos del archivo.txt*/
 
-import java.awt.*;
-import java.io.File;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,12 +21,12 @@ public class Ej1 {
         System.out.println("Mínimo: " + maxMin.get(1));
     }
 
-    public static ArrayList encontrarMaxMin(String archivo){
+    public static ArrayList<Integer> encontrarMaxMin(String archivo){
         Path path = Paths.get(archivo);
         ArrayList<Integer> retorno = new ArrayList<>();
 
         try {
-            int maximo = Integer.MIN_VALUE;
+            int maximo = Integer.MIN_VALUE; // Le da el minimo valor posible de enteros para que así el resto de números van siendo mayores a ese, por si fuese una lista de valores negativos, el 0 sería el numero mayor
             int minimo = Integer.MAX_VALUE;
             List<String> lineas = Files.readAllLines(path);
             for (String linea : lineas){
@@ -37,7 +36,7 @@ public class Ej1 {
                     if (num > maximo){
                         maximo = num;
                     }
-                    minimo = num;
+
                     if (num < minimo){
                         minimo = num;
                     }
