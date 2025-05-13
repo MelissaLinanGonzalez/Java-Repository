@@ -1,4 +1,0 @@
-Hola, esto es un nuevo archivo.txt.
-Bienvenido!
-Hola esto es un ejemplo de apendar una linea
-Esto es otro ejemplo de salto de línea y nueva línea escrita
