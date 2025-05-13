@@ -33,6 +33,7 @@ public class Main {
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
             mapper.writeValue(archivoJson, usuarios);
             System.out.println("Usuario guardado");
+            System.out.println(" ");
         } catch (IOException e){
             System.out.println("Error: " + e.getMessage());
         }
@@ -50,7 +51,29 @@ public class Main {
             System.out.println(" ");
             System.out.println("*** Usuarios añadidos ***");
             for (Usuario usuario : usuarios){
-                System.out.println("Nombre: " + usuario.getNombre() + ". Email: " + usuario.getEmail());
+                System.out.println("Nombre: " + usuario.getNombre() + ". Email: " + usuario.getEmail() + ". Edad: " + usuario.getEdad());
+            }
+        } catch (IOException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public static void mayoresDe30(File archivoJson){
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            if (!archivoJson.exists() || archivoJson.length() < 0){
+                System.out.println("Archivo JSON no existe o está vacío");
+                return;
+            }
+
+            Usuario[] usuarios = mapper.readValue(archivoJson, Usuario[].class);
+            System.out.println(" ");
+            System.out.println("*** Usuarios añadidos mayores de 30 años ***");
+            for (Usuario usuario : usuarios){
+                if (usuario.getEdad() >= 30){
+                    System.out.println("Nombre: " + usuario.getNombre() + ". Email: " + usuario.getEmail() + ". Edad: " + usuario.getEdad());
+                }
+
             }
         } catch (IOException e){
             System.out.println("Error: " + e.getMessage());
@@ -60,31 +83,41 @@ public class Main {
     public static void main(String[] args) {
         File archivoJson = new File("Introduccion_File/src/EjercicioJSON/Ej2/Usuarios.json");
         Scanner entrada = new Scanner(System.in);
+        boolean salir = false;
 
-        while (true){
+        while (!salir){
             System.out.println("*** MENÚ ***");
             System.out.println("1. Introducir usuario en el archivo JSON");
             System.out.println("2. Mostrar el archivo JSON");
+            System.out.println("3. Mostrar usuarios mayores de 30 años");
             System.out.println("0. Salir");
             System.out.print("Seleccione una opción: ");
             int opcion = entrada.nextInt();
             entrada.nextLine();
 
             switch (opcion){
-                case 0: break;
+                case 0:
+                    salir = true;
+                    break;
                 case 1:
                     System.out.print("Introduzca el nombre del usuario a añadir: ");
                     String nombre = entrada.nextLine();
                     System.out.print("Introduzca el email del usuario: ");
                     String email = entrada.nextLine();
+                    System.out.print("Introduzca la edad del usuario: ");
+                    int edad = entrada.nextInt();
 
-                    Usuario usuario = new Usuario(nombre, email);
+                    Usuario usuario = new Usuario(nombre, email, edad);
 
                     guardarUsuarioJson(usuario, archivoJson);
                     break;
                 case 2:
                     leerUsuarioJson(archivoJson);
-                    System.out.println("");
+                    System.out.println(" ");
+                    break;
+                case 3:
+                    mayoresDe30(archivoJson);
+                    System.out.println(" ");
             }
         }
     }

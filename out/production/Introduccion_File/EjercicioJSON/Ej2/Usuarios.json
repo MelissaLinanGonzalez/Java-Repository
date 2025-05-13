@@ -1,10 +1,21 @@
 [ {
   "nombre" : "Pepe",
-  "email" : "pepito@gmail.com"
+  "email" : "pepito@gmail.com",
+  "edad" : 0
 }, {
   "nombre" : "Antonio",
-  "email" : "antoniomanuel@gmail.com"
+  "email" : "antoniomanuel@gmail.com",
+  "edad" : 0
 }, {
   "nombre" : "Rocio",
-  "email" : "roro@gmail.com"
+  "email" : "roro@gmail.com",
+  "edad" : 0
+}, {
+  "nombre" : "Maria",
+  "email" : "marialo@gmail.com",
+  "edad" : 25
+}, {
+  "nombre" : "Pamela",
+  "email" : "lamela@gmail.com",
+  "edad" : 30
 } ]
