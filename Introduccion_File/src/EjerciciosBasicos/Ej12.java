@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Ej12 {
     public static void main(String[] args) {
-        File archivo = new File("Introduccion_File/src/datos.csv");
+        File archivo = new File("RepasoFile/src/datos.csv");
 
         try {
             BufferedReader lector = new BufferedReader(new FileReader(archivo));
