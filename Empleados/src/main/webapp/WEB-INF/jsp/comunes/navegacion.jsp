@@ -1,7 +1,17 @@
+<!-- Agregar las url de la aplicación -->
+
+<c:set var="urlInicio">
+    <c:url value="${application.contextPath}/" />
+</c:set>
+
+<c:set var="urlAgregar">
+    <c:url value="${application.contextPath}/agregar" />
+</c:set>
+
 <div class="container">
         <nav class="navbar md:navbar-expand bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/empleados/">Sistema de Empleados</a>
+                <a class="navbar-brand" href="${urlInicio}">Sistema de Empleados</a>
                 <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" aria-hidden="true"></span>
                 </button>
@@ -16,7 +26,7 @@
                                 <a class="nav-link active" aria-current="page" href="/empleados">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/empleados/agregar">Agregar Empleado</a>
+                                <a class="nav-link" href="${urlAgregar}">Agregar Empleado</a>
                             </li>
                         </ul>
                     </div>
